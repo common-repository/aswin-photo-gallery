@@ -1,0 +1,203 @@
+@charset 'UTF-8';
+/* Slider */
+.apgsl-loading .apgsl-list
+{
+    background: #fff url('../images/ajax-loader.gif') center center no-repeat;
+}
+
+/* Icons */
+@font-face
+{
+    font-family: 'apgsl';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/apgsl.eot');
+    src: url('../fonts/apgsl.eot?#iefix') format('embedded-opentype'), url('../fonts/apgsl.woff') format('woff'), url('../fonts/apgsl.ttf') format('truetype'), url('../fonts/apgsl.svg#apgsl') format('svg');
+}
+/* Arrows */
+.apgsl-prev,
+.apgsl-next
+{
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding:3px;
+    background:rgba(0,0,0,0.3);
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.apgsl-prev:hover,
+.apgsl-prev:focus,
+.apgsl-next:hover,
+.apgsl-next:focus
+{
+    color: transparent;
+    outline: none;
+    background: transparent;
+}
+.apgsl-prev:hover:before,
+.apgsl-prev:focus:before,
+.apgsl-next:hover:before,
+.apgsl-next:focus:before
+{
+    opacity: 1;
+}
+.apgsl-prev.apgsl-disabled:before,
+.apgsl-next.apgsl-disabled:before
+{
+    opacity: .25;
+}
+
+.apgsl-prev:before,
+.apgsl-next:before
+{
+    font-family: 'apgsl';
+    font-size: 30px;
+    line-height: 1;
+    background:rgba(0,0,0,0.1);
+    padding:2px;
+    opacity: 1;
+    color: white;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+}
+
+.apgsl-prev
+{
+    left:-20px;
+}
+[dir='rtl'] .apgsl-prev
+{
+    right: -20px;
+    left: auto;
+}
+.apgsl-prev:before
+{
+    content: '←';
+}
+[dir='rtl'] .apgsl-prev:before
+{
+    content: '→';
+}
+
+.apgsl-next
+{
+    right: -20px;
+}
+[dir='rtl'] .apgsl-next
+{
+    right: auto;
+    left: -20px;
+}
+.apgsl-next:before
+{
+    content: '→';
+}
+[dir='rtl'] .apgsl-next:before
+{
+    content: '←';
+}
+
+/* Dots */
+.apgsl-dotted.apgsl-slider
+{
+    margin-bottom: 30px;
+}
+
+.apgsl-dots
+{
+    position: absolute;
+    bottom: -25px;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+.apgsl-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+.apgsl-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.apgsl-dots li button:hover,
+.apgsl-dots li button:focus
+{
+    outline: none;
+}
+.apgsl-dots li button:hover:before,
+.apgsl-dots li button:focus:before
+{
+    opacity: 1;
+}
+.apgsl-dots li button:before
+{
+    font-family: 'apgsl';
+    font-size: 6px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    content: '•';
+    text-align: center;
+
+    opacity: .25;
+    color: black;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.apgsl-dots li.apgsl-active button:before
+{
+    opacity: .75;
+    color: black;
+}

@@ -1,0 +1,1 @@
+<?php _e('Nothis to display.', 'aswin-photo-gallery'); ?>

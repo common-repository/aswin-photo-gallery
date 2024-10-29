@@ -1,0 +1,119 @@
+/* Slider */
+.apgsl-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.apgsl-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.apgsl-list:focus
+{
+    outline: none;
+}
+.apgsl-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.apgsl-slider .apgsl-track,
+.apgsl-slider .apgsl-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.apgsl-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.apgsl-track:before,
+.apgsl-track:after
+{
+    display: table;
+
+    content: '';
+}
+.apgsl-track:after
+{
+    clear: both;
+}
+.apgsl-loading .apgsl-track
+{
+    visibility: hidden;
+}
+
+.apgsl-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .apgsl-slide
+{
+    float: right;
+}
+.apgsl-slide img
+{
+    display: block;
+}
+.apgsl-slide.apgsl-loading img
+{
+    display: none;
+}
+.apgsl-slide.dragging img
+{
+    pointer-events: none;
+}
+.apgsl-initialized .apgsl-slide
+{
+    display: block;
+}
+.apgsl-loading .apgsl-slide
+{
+    visibility: hidden;
+}
+.apgsl-vertical .apgsl-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.apgsl-arrow.apgsl-hidden {
+    display: none;
+}
